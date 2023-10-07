@@ -105,7 +105,19 @@ text-align: center;
   border-radius:30px;
   font-size: 2rem;
 }
+#scorediv
+{
+  display:flex;
+  flex-direction: row;
+  gap:250px;
+  color:white;
+  color:lightgoldenrodyellow;
+  font-size: 1.5rem;
+  position: relative;
+
 }
 
 
 
+
+ 
