@@ -1,10 +1,20 @@
-let rock = document.getElementById('rock')
+
+
+
+     
+ 
+
+     let rock = document.getElementById('rock')
 let paper = document.getElementById('paper')
 let scissors = document.getElementById('scissors')
 let score = document.getElementById('score')
 let option = document.getElementById('option')
 let result = document.getElementById('result')
 let reset=document.getElementById('reset')
+let ur=document.getElementById('urscore')
+let comp=document.getElementById('compscore')
+let compsum=0
+let usersum=0
 rock.onclick =()=>
   {
    let value=0
@@ -24,6 +34,10 @@ scissors.onclick =()=>
     
   }
 
+const update =()=>
+{
+
+}
 const res =(val) =>
   {
     let temp =val
@@ -79,6 +93,8 @@ const fail =() =>
   {
     score.innerHTML=0
     result.innerHTML='BETTER LUCK NEXT TIME😞!'
+    compsum=compsum+1
+    comp.innerHTML=compsum
       
   }
 const win =() =>
@@ -86,11 +102,14 @@ const win =() =>
     score.innerHTML=1
     result.innerHTML='HURRAYY🥳!'
       
+      usersum=usersum+1
+      ur.innerHTML=usersum
   }
 const draw =() =>
   {
     score.innerHTML=0
     result.innerHTML="OOPS 😞!"
+    update()
       
   }
 reset.onclick =() =>
